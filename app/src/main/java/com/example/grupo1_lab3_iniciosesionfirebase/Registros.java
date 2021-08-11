@@ -18,7 +18,7 @@ public class Registros extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registros);
-        db_reference = FirebaseDatabase.getInstance().getReference().child("Registros");
+        db_reference = FirebaseDatabase.getInstance().getReference().child("registros");
         leerRegistros();
     }
     public void leerRegistros(){
@@ -39,7 +39,7 @@ public class Registros extends AppCompatActivity {
         LinearLayout contTemp = (LinearLayout) findViewById(R.id.ContenedorTemp);
         LinearLayout contAxis = (LinearLayout) findViewById(R.id.ContenedorAxis);
         String tempVal = String.valueOf(snapshot.child("temp").getValue());
-        String axisVal = String.valueOf(snapshot.child("axis").getValue());
+        String axisVal = String.valueOf(snapshot.child("axi").getValue());
         TextView temp = new TextView(getApplicationContext());
         temp.setText(tempVal+" C");
         contTemp.addView(temp);
